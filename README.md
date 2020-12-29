@@ -1,1 +1,4 @@
-# CV_EleanaRinaudo
+# Eleana Rinaudo
+
+
+![CV_EleanaRinaudo](img.jpg)

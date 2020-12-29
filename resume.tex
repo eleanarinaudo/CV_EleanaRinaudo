@@ -1,0 +1,175 @@
+\documentclass[%singlesided,
+               doublesided,
+               paper=a4,
+               fontsize=10pt
+              ]{my-resume}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% set geometry
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setlength\highlightwidth{8cm}
+\setlength\headerheight{4cm}            % note that margintop gets added to this value, i.e. the header bar is 5cm
+\setlength\marginleft{1cm}
+\setlength\marginright{\marginleft}      % needs to be 1.5 times to be actually equal. why?
+\setlength\margintop{1cm}
+\setlength\marginbottom{1cm}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% FONTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\RequirePackage{fontspec}
+\setmainfont{Carlito}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% COLORS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\colorlet{highlightbarcolor}{white2}
+\colorlet{headerbarcolor}{darkgray2}
+\colorlet{headerfontcolor}{white}
+\colorlet{accent}{purple}
+\colorlet{heading}{black}
+\colorlet{emphasis}{black}
+\colorlet{body}{black}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% set document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+\name{Eleana Rinaudo}
+\tagline{Estudiante de Ciencias de la Computación
+\\ Facultad de Matemática, Física, Astronomía y Computación\\ Universidad Nacional de Córdoba}
+\photo[round]{profile.jpg}{\dimexpr \headerheight-\marginbottom}   % make photo exactly match the header with margintop/marginright/marginbottom as margin
+
+\makeheader
+
+\highlightbar{
+
+    \section{Contacto}
+    
+    \email{eleanarinaudo@gmail.com}
+    \phone{(0351)-153933769}
+    \homepage{eleanarinaudo.com}{https://eleanarinaudo.github.io}
+    \github{@EleanaRinaudo}{https://github.com/eleanarinaudo}
+    \linkedin{Eleana Rinaudo}{https://www.linkedin.com/in/eleana-rinaudo/}
+  
+ \section{Conocimiento}    
+\subsection{ \skillsection{Programación}}
+\begin{itemize}
+\item     Python
+\item     Java
+\item     C
+\item     C++
+\item 	C#
+\item     HTML/CSS
+\item     LaTeX
+\item     GIT
+\item 	PHP
+\item  	SQL
+\end{itemize}
+    
+\vspace{1.0em}
+\subsection{ \skillsection{Sistemas Operativos}}
+\begin{itemize}
+\item 	Linux
+\item 	Windows
+\end{itemize}
+
+    
+\vspace{1.0em}
+\subsection{ \skillsection{Idiomas}   }
+
+ 
+\begin{itemize}
+\item 	Inglés intermedio
+\item 	Español
+\end{itemize}
+ 
+\vspace{1.0em}
+\subsection{ \skillsection{Voluntariado} }
+ 
+\begin{itemize}
+\item Co-organizadora en Google Developer Groups de Córdoba, Argentina
+(GDG Córdoba)
+\end{itemize}
+
+}
+\mainbar{
+    \section{Perfil Personal}
+    Estudiante universitaria con el objetivo de desarrollarse en un ambiente de la industria que amplie mis conocimientos y formas de aprendizaje.
+   
+    
+    \section{Experiencia Laboral}
+    \job{2018-2019}
+        {SERVICE EXPRESS}
+        {}
+        {Atención al público. Venta de articulos para celulares y servicio de relojería}
+    \job{2016-2017}
+        {GEP}
+        {}
+        {Atención al público. Venta de articulos para celulares y de relojes}
+    \job{2014-2016}
+        {SHOP-PHONE}
+        {}
+        {Atención al público. Venta de articulos para celulares}
+    
+    \section{Educación}
+    \job{2016 - ACTUALIDAD}
+        {Universidad Nacional de Córdoba}
+        {}
+        {Licenciatura en Ciencias de la Computación en Facultad de Matemática, Física, Astronomía y Computación}
+        
+    \job{2012 - 2014}
+        {Universidad Nacional de Córdoba}
+        {}
+        {Ingeniería en Computación en Facultad de Ciencias Exactas, Físicas y Naturales}
+       
+    \job{2005 - 2010}
+        {Esc. Dr. Dalmacio Velez Sarsfield}
+        {}
+        {Bachiller Orientado en Economía y Gestión de las
+Organizaciones}
+
+    \section{Cursos}
+    \achievement{Full Stack con Python}
+    \achievement{Full Stack con C #}
+    \achievement{Modelado e Impresión 3D}
+    \achievement{Taller de Agilidad y Scrum}
+    \achievement{Testing}
+     \achievement{Desarrollo Web con Angular CLI}
+    \achievement{Mantenimiento y Reparación de PC}
+    
+    
+    
+    \section{Habilidades}
+    \smallskip % additional skip because tag outlines use up space
+    \tag{Puntualidad}
+    \tag{Responsabilidad}
+    \tag{Trabajo en Equipo}
+    \tag{Creativa}
+    \tag{Autodidactiva}
+    \tag{Adaptación}
+    \tag{Empatica}
+    \tag{Flexibilidad}
+
+    
+
+    }
+}
+\makebody
+\clearpage
+
+
+\pagestyle{highlightmain}
+\highlightbar{}
+\mainbar{
+\end{document}
