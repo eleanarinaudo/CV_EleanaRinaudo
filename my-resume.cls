@@ -239,47 +239,29 @@
 % variables for name, tag line and photo setup
 \newcommand{\name}[1]{\def\@name{#1}}
 \newcommand{\tagline}[1]{\def\@tagline{#1}}
-\newcommand{\photo}[3][]{\def\@photo{#2}\def\@photodiameter{#3}\def\@photoformat{#1}}
+
 
 % try to align the top of the written out name with the top of the photo
 % it is impossible to get the actual height of a line to determine the offset between line top and charachter top
 % therefore use a bad workaround by setting the line height to 1.5 times the character height
 \newlength{\@namefontheight}
 \newlength{\@namelineheight}
-\settoheight{\@namefontheight}{\Huge\bfseries\MakeUppercase{A}}
-\setlength\@namelineheight{1.5\@namefontheight}
+\setlength\@namelineheight{1\@namefontheight}
 
 % assemble the header
 \newcommand{\makeheader}{% header bar is a minipage
     \begin{minipage}[t][\headerheight]{\textwidth}%
-        % \vspace{-1em}
-        \vspace{\dimexpr \@namefontheight-\@namelineheight}                     % align top of name and photo
+         \vspace{-1em}
+                   % align top of name and photo
         % create two minipages for header text and photo if photo is given
-        \ifdef{\@photodiameter}{
-            \begin{minipage}[t]{\dimexpr \textwidth-\@photodiameter}        % to top align name and photo add [t] here
-                \vspace{0cm}%
-            }{}
             % print the header text
-                \begin{minipage}[t][2em]{\linewidth}
-                    {\Huge\bfseries\color{headerfontcolor}\MakeUppercase{\@name}\par}
+                \begin{minipage}[t][1em]{\linewidth}
+                    {\Huge\bfseries\color{headerfontcolor}\MakeUppercase{\@name}}
                 \end{minipage}%
                 \vfill%
-                \begin{minipage}[b][\dimexpr \headerheight-2em-\marginbottom]{\linewidth}%
+                \begin{minipage}[t][\dimexpr \headerheight-0em-\marginbottom]{\linewidth}%
                     {\large\bfseries\color{headerfontcolor}\@tagline\par}
                 \end{minipage}%
-        % finish the minipages for text and photo if photo is given
-        \ifdef{\@photodiameter}{%
-            \end{minipage}\hfil%
-            \begin{minipage}[t]{\@photodiameter}                                % to top align name and photo add [t] here
-                \vspace{0cm}
-    			% format as square or round
-    			\ifthenelse{\equal{\@photoformat}{square}}{%
-    			    \includegraphics[width=\linewidth]{\@photo}%
-    			}{%
-    			    \tikz\path[fill overzoom image={\@photo}]circle[radius=0.5\linewidth];
-    			}
-    		\end{minipage}%
-            }{}
 	\end{minipage}%
 }
 
@@ -593,3 +575,4 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %  THE END
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
